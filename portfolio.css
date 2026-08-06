@@ -32,6 +32,8 @@
                 background .3s,
                 border .3s;
                 /* z-index: 9990; */
+                text-align: center;
+                line-height: 24px;
 }
 /* body:has() */
 
