@@ -324,36 +324,41 @@ button:hover {
 
 
 /* Hero Style Start */
-
 .about-area {
-    /* background: linear-gradient(to top,
-            #919191,
-            transparent); */
-}
-
-.main-area{
-    display: flex;
-}
-
-.main-nav-area{
-    flex: 1;
-}
-
-.main-area-image{
-    flex: 1;
     position: relative;
-    & i{
-        position: absolute;
-        font-size: 13rem;
-        color: var(--text-color);
-    }
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
-/* Hero Style End */
 
-.main-area-image img{
+.scroll-bar {
     height: 100vh;
 }
 
+.wrapper-404 {
+    display: flex;
+    align-items: center;
+    width: 400vw;
+    height: 100vh;
+    will-change: transform;
+}
+
+.web-text {
+    width: 400vw;
+    margin: 0;
+    font-size: 40vw;
+    line-height: 1;
+    white-space: nowrap;
+}
+/* Hero sectionEnd */
+
+/* welcome-page start */
+.welcome-page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+/* welcome-page End */
 /* Responsive
 @media(max-width:768px) {
 
