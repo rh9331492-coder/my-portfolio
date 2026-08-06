@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --primary-color: rgba(255, 255, 255, 0.817);
+    --text-color: rgb(16, 16, 16);
+    --border-color: rgb(10, 10, 10);
+}
+
+html,
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+    color: var(--text-color);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+ul,
+li a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+/* -------------------------------------------------- */
+
+/* Header Start */
+header {
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: -11px;
+}
+
+.main {
+    padding: 11px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent */
+    backdrop-filter: blur(7px);
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+    margin-top: 20px;
+
+    animation: header 0.6s ease forwards;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    font-weight: 500;
+    transition: .3s;
+    position: relative;
+}
+
+.header-nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    transition: .3s;
+}
+
+.header-nav ul li a:hover {
+    color: rgb(45, 44, 44);
+}
+
+.header-nav ul li a:hover::after {
+    width: 100%;
+}
+
+button {
+    background: #1a1a1b;
+    border: none;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+button a {
+    display: block;
+    padding: 12px 28px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.509);
+}
+
+
+/* animation top ber */
+@keyframes header {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Header End */
+/* --------------------------------------------------------------------------------------- */
+/* Banner-section Start */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .container {
+    width: 100%;
+}
+
+.hero-section h1 {
+    text-align: center;
+    font-size: clamp(80px, 14vw, 220px);
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+}
+
+.developer-image img {
+    width: 100vw;
+    height: 100%;
+    animation: image 0.8s ease forwards;
+}
+
+@keyframes image {
+    from {
+        transform: rotate(-100deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Huge Background Text */
+
+.bg-text {
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    font-size: 15vw;
+    color: #000;
+    z-index: 1;
+    white-space: nowrap;
+
+    animation: developer 0.8s ease forwards;
+}
+/* developer animation  */
+@keyframes developer {
+    0% {
+        transform: translate(-50%, 120px);
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    60% {
+        opacity: 0.5;
+        filter: blur(5px);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* Person */
+
+.person {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 85%;
+    object-fit: contain;
+    z-index: 2;
+}
+
+/* Left Card */
+
+.left-box {
+    position: absolute;
+    left: 40px;
+    bottom: 0px;
+    width: 260px;
+    background: white;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    z-index: 3;
+}
+
+.left-box h4 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.left-box h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.left-box p {
+    font-size: 14px;
+}
+
+/* Right Card */
+
+.right-box {
+    position: absolute;
+    right: 40px;
+    bottom: 0px;
+    width: 240px;
+    border: 1px solid  var(--border-color);
+    z-index: 3;
+}
+
+.item {
+    background: white;
+    padding: 22px;
+}
+
+.item.dark {
+    background: #000;
+    color: #fff;
+    text-align: right;
+}
+
+.item h2 {
+    font-size: 40px;
+}
+
+.item p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Responsive
+@media(max-width:768px) {
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    button a {
+        text-align: center;
+    }
+} */
