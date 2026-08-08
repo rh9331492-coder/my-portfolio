@@ -27,14 +27,15 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: transform .15s linear,
-                width .3s,
-                height .3s,
-                background .3s,
-                border .3s;
-                /* z-index: 9990; */
-                text-align: center;
-                line-height: 24px;
+        width .3s,
+        height .3s,
+        background .3s,
+        border .3s;
+    /* z-index: 9990; */
+    text-align: center;
+    line-height: 24px;
 }
+
 /* body:has() */
 
 html,
@@ -242,9 +243,10 @@ button:hover {
     height: 85%;
     object-fit: contain;
     z-index: 2;
-    animation: my-image 0.3s ease ;
+    animation: my-image 0.3s ease;
 }
-@keyframes my-image  {
+
+@keyframes my-image {
     0% {
         transform: translate(-50%, 120px);
         opacity: 0;
@@ -262,6 +264,7 @@ button:hover {
         filter: blur(0);
     }
 }
+
 /* Left Card */
 
 .left-box {
@@ -352,15 +355,201 @@ button:hover {
     line-height: 1;
     white-space: nowrap;
 }
+
 /* Hero sectionEnd */
 
 /* welcome-page start */
-.welcome-page{
-    height: 100vh;
+.about-section {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background-image: url(./my-image/team.jpg);
+    /* position: fixed; */
+    background-position: center center;
+    background-size: cover;
 }
+
+.section {
+    height: 200vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-content {
+    max-width: 650px;
+}
+
+.subtitle {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+.about-content h2 {
+    font-size: clamp(40px, 7vw, 80px);
+    line-height: 1;
+    margin-bottom: 25px;
+    color: #FFF;
+}
+
+.about-content p {
+    max-width: 550px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    opacity: 0.7;
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #111;
+}
+
 /* welcome-page End */
+
+/* slider Start */
+
+.slider-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 5%;
+    background: #ffffff;
+    color: #faf6f6;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slide-track {
+    display: flex;
+    width: 300%;
+}
+
+.slide {
+    position: relative;
+    width: 33.333%;
+    height: 650px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .6s ease;
+}
+
+.slide:hover img {
+    transform: scale(1.05);
+}
+
+/* Dark overlay */
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 30%, rgba(0, 0, 0, .8));
+}
+
+/* Content */
+.slide-content {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    z-index: 2;
+}
+
+.slide-content span {
+    font-size: 14px;
+    letter-spacing: 3px;
+    opacity: .7;
+}
+
+.slide-content h2 {
+    font-size: clamp(40px, 6vw, 75px);
+    margin: 10px 0;
+}
+
+.slide-content p {
+    font-size: 17px;
+    opacity: .7;
+}
+
+/* Controls */
+.slider-controls {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.slider-controls button {
+    width: 55px;
+    height: 55px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.slider-controls button:hover {
+    background: #fff;
+    color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slider-section {
+        padding: 60px 20px;
+    }
+
+    .slide {
+        height: 500px;
+    }
+
+    .slide-content {
+        left: 25px;
+        bottom: 30px;
+    }
+
+    .slide-content h2 {
+        font-size: 42px;
+    }
+}
+
+/* slider End */
 /* Responsive
 @media(max-width:768px) {
 
