@@ -8,7 +8,6 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
-
 :root {
     --primary-color: rgba(255, 255, 255, 0.817);
     --text-color: rgb(16, 16, 16);
@@ -36,6 +35,14 @@
     line-height: 24px;
 }
 
+.liner-color{
+    position: fixed;
+    left: 30px;
+    width: 100vw;
+    height: 3px;
+    color: red;
+}
+
 /* body:has() */
 
 html,
@@ -45,6 +52,7 @@ body {
     background-color: var(--primary-color);
     overflow-x: hidden;
     color: var(--text-color);
+    scroll-behavior: smooth;
 }
 
 img {
@@ -429,125 +437,7 @@ button:hover {
 
 /* slider Start */
 
-.slider-section {
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px 5%;
-    background: #ffffff;
-    color: #faf6f6;
-    overflow: hidden;
-}
 
-.slider {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.slide-track {
-    display: flex;
-    width: 300%;
-}
-
-.slide {
-    position: relative;
-    width: 33.333%;
-    height: 650px;
-    flex-shrink: 0;
-    overflow: hidden;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform .6s ease;
-}
-
-.slide:hover img {
-    transform: scale(1.05);
-}
-
-/* Dark overlay */
-.slide::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(transparent 30%, rgba(0, 0, 0, .8));
-}
-
-/* Content */
-.slide-content {
-    position: absolute;
-    left: 50px;
-    bottom: 50px;
-    z-index: 2;
-}
-
-.slide-content span {
-    font-size: 14px;
-    letter-spacing: 3px;
-    opacity: .7;
-}
-
-.slide-content h2 {
-    font-size: clamp(40px, 6vw, 75px);
-    margin: 10px 0;
-}
-
-.slide-content p {
-    font-size: 17px;
-    opacity: .7;
-}
-
-/* Controls */
-.slider-controls {
-    max-width: 1200px;
-    margin: 30px auto 0;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-}
-
-.slider-controls button {
-    width: 55px;
-    height: 55px;
-    border: 1px solid #444;
-    border-radius: 50%;
-    background: transparent;
-    color: #fff;
-    font-size: 22px;
-    cursor: pointer;
-    transition: .3s ease;
-}
-
-.slider-controls button:hover {
-    background: #fff;
-    color: #111;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .slider-section {
-        padding: 60px 20px;
-    }
-
-    .slide {
-        height: 500px;
-    }
-
-    .slide-content {
-        left: 25px;
-        bottom: 30px;
-    }
-
-    .slide-content h2 {
-        font-size: 42px;
-    }
-}
 
 /* slider End */
 /* Responsive
