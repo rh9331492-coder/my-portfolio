@@ -1375,7 +1375,7 @@ button:hover {
   }
 }
 /* flex-section style end */
-/* Responsive
+/* Responsive */
 @media(max-width:768px) {
 
     .container {
@@ -1396,4 +1396,4 @@ button:hover {
     button a {
         text-align: center;
     }
-} */
+}
