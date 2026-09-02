@@ -1,0 +1,546 @@
+/* =========================================
+   RESPONSIVE CSS - MAX WIDTH 768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* ================= HEADER ================= */
+
+    header {
+        top: 0;
+        padding: 0 10px;
+    }
+
+    .main {
+        margin-top: 10px;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .header-nav ul {
+        gap: 15px;
+    }
+
+    .header-nav ul li a {
+        font-size: 14px;
+    }
+
+    header button a {
+        padding: 9px 16px;
+        font-size: 13px;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero-section {
+        height: 100svh;
+    }
+
+    .hero {
+        height: 100svh;
+    }
+
+    .hero-section h1 {
+        font-size: 18vw;
+    }
+
+    .bg-text {
+        top: 32%;
+        font-size: 20vw;
+    }
+
+    .image img {
+        height: 65%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+
+    /* LEFT CARD */
+
+    .left-box {
+        left: 15px;
+        bottom: 10px;
+        width: 200px;
+        padding: 18px;
+    }
+
+    .left-box h4 {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+
+    .left-box h2 {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .left-box p {
+        font-size: 12px;
+    }
+
+
+    /* RIGHT CARD */
+
+    .right-box {
+        right: 15px;
+        bottom: 10px;
+        width: 170px;
+    }
+
+    .item {
+        padding: 15px;
+    }
+
+    .item h2 {
+        font-size: 28px;
+    }
+
+    .item p {
+        font-size: 11px;
+    }
+
+
+    /* ================= ABOUT SCROLL ================= */
+
+    .about-area {
+        height: 100vh;
+    }
+
+    .wrapper-404 {
+        width: 400vw;
+        height: 100vh;
+    }
+
+    .web-text {
+        font-size: 40vw;
+    }
+
+
+    /* ================= ABOUT SECTION ================= */
+
+    .about-section {
+        min-height: 100vh;
+        padding: 70px 20px;
+        background-attachment: scroll;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .subtitle {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .about-content h2 {
+        font-size: clamp(40px, 11vw, 65px);
+        line-height: 1;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .btn {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+
+
+    /* ================= FLEX SECTION ================= */
+
+    .flex-section {
+        height: auto;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .flex-row {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+
+    /* ================= NEOH SECTION ================= */
+
+    .neoh-section {
+        min-height: auto;
+        padding: 60px 20px 80px;
+    }
+
+    .container-neoh {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin: 30px auto;
+    }
+
+    .container-neoh-bottom {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin: 60px auto;
+    }
+
+    .neoh-image-wrapper {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .neoh-image-wrapper::after {
+        top: -8px;
+        left: 8px;
+    }
+
+    .neoh-content {
+        max-width: 100%;
+    }
+
+    .neoh-content h2 {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    .title-line {
+        margin-bottom: 30px;
+    }
+
+    .title-line span {
+        width: 120px;
+    }
+
+    .neoh-content p {
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .neoh-buttons {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 35px;
+    }
+
+    .neoh-btn {
+        width: 100%;
+        min-width: 0;
+        height: 58px;
+        font-size: 17px;
+    }
+
+    .back-top {
+        display: none;
+    }
+
+
+    /* ================= PROJECTS ================= */
+
+    .projects-section {
+        padding: 80px 20px;
+    }
+
+    .projects-heading {
+        margin-bottom: 60px;
+    }
+
+    .projects-heading p {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .projects-heading h2 {
+        font-size: 13vw;
+    }
+
+    .projects-container {
+        gap: 70px;
+    }
+
+    .project-number {
+        left: 0;
+        top: -30px;
+        font-size: 16px;
+    }
+
+    .project-image {
+        height: 400px;
+    }
+
+    .project-info {
+        display: block;
+        padding: 20px 5px;
+    }
+
+    .project-info h3 {
+        font-size: 24px;
+    }
+
+    .project-info p {
+        font-size: 14px;
+    }
+
+    .tech {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .tech span {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .contact-section {
+        padding: 90px 20px;
+    }
+
+    .contact-heading {
+        margin-bottom: 60px;
+    }
+
+    .contact-heading p {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .contact-heading h2 {
+        font-size: 13vw;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .contact-left {
+        padding-top: 0;
+    }
+
+    .contact-left h3 {
+        font-size: 30px;
+    }
+
+    .contact-left p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .email-link {
+        font-size: 17px;
+    }
+
+    .contact-form {
+        gap: 20px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        font-size: 15px;
+        padding: 15px 5px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 16px 25px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer {
+        padding: 70px 20px 20px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-brand h2 {
+        font-size: 38px;
+    }
+
+    .footer-brand p {
+        font-size: 14px;
+    }
+
+    .footer-links h3,
+    .footer-social h3 {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .footer-links a,
+    .footer-social a {
+        font-size: 15px;
+    }
+
+    .footer-big-text {
+        margin-top: 60px;
+    }
+
+    .footer-big-text h1 {
+        font-size: 20vw;
+        letter-spacing: -3px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE - MAX WIDTH 500px
+========================================= */
+
+@media (max-width: 500px) {
+
+    .header-nav {
+        display: none;
+    }
+
+    .main {
+        padding: 9px 12px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    header button a {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .bg-text {
+        font-size: 22vw;
+        top: 30%;
+    }
+
+    .image img {
+        height: 58%;
+    }
+
+    .left-box {
+        left: 10px;
+        width: 155px;
+        padding: 12px;
+    }
+
+    .left-box h2 {
+        font-size: 14px;
+    }
+
+    .left-box p {
+        font-size: 10px;
+    }
+
+    .right-box {
+        right: 10px;
+        width: 135px;
+    }
+
+    .item {
+        padding: 12px;
+    }
+
+    .item h2 {
+        font-size: 23px;
+    }
+
+    .item p {
+        font-size: 9px;
+    }
+
+
+    /* NEOH */
+
+    .neoh-section {
+        padding: 40px 15px 60px;
+    }
+
+    .neoh-content h2 {
+        font-size: 30px;
+    }
+
+    .neoh-content p {
+        font-size: 16px;
+    }
+
+    .title-line span {
+        width: 90px;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-section {
+        padding: 60px 15px;
+    }
+
+    .project-image {
+        height: 300px;
+    }
+
+    .projects-heading h2 {
+        font-size: 15vw;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+        padding: 70px 15px;
+    }
+
+    .contact-heading h2 {
+        font-size: 15vw;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 60px 15px 20px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-brand h2 {
+        font-size: 34px;
+    }
+
+    .footer-big-text h1 {
+        font-size: 23vw;
+        letter-spacing: -2px;
+    }
+}

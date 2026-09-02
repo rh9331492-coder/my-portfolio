@@ -20,7 +20,7 @@ document.addEventListener("mousemove", (e) => {
 
 
 // slider js
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 gsap.utils.toArray(".project-card").forEach((card, index) => {
 
@@ -39,4 +39,16 @@ gsap.utils.toArray(".project-card").forEach((card, index) => {
     }
   });
 
+});
+
+const menuBtn = document.getElementById("menuBtn");
+const menuClose = document.getElementById("menuClose");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("active");
+});
+
+menuClose.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
 });

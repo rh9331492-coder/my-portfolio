@@ -9,6 +9,7 @@
         integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./portfolio.css">
+    <link rel="stylesheet" href="./responsive.css">
     <title>Portfolo</title>
 </head>
 
@@ -19,10 +20,14 @@
     <header class="header-area">
         <div class="container">
             <div class="main">
+
                 <div class="logo">
                     Rakib
                 </div>
-                <nav class="header-nav">
+
+                <nav class="header-nav" id="mobileMenu">
+                    <button class="menu-close" id="menuClose">&times;</button>
+
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -30,7 +35,16 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-                <button><a href="./Hire-Me.html">Hire Me</a></button>
+
+                <button class="hire-btn">
+                    <a href="./Hire-Me.html">Hire Me</a>
+                </button>
+
+                <!-- Hamburger -->
+                <button class="menu-btn" id="menuBtn">
+                    ☰
+                </button>
+
             </div>
         </div>
     </header>

@@ -98,11 +98,17 @@ li a {
 /* ------------------------- */
 
 /* Header Start */
-header {
+
+/* ================================
+   HEADER
+================================ */
+
+.header-area {
     width: 100%;
-    z-index: 1000;
     position: fixed;
-    top: -11px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .main {
@@ -110,22 +116,31 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     background: rgba(255, 255, 255, 0.2);
-    /* Semi-transparent */
     backdrop-filter: blur(7px);
+
     border-radius: 30px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
-    margin-top: 20px;
 
-    animation: header 0.6s ease forwards;
+    margin-top: 20px;
 }
+
+
+/* ================================
+   LOGO
+================================ */
 
 .logo {
     font-size: 30px;
     font-weight: bold;
-    color: var(--text-color);
-    cursor: pointer;
+    color: #101010;
 }
+
+
+/* ================================
+   NAVIGATION
+================================ */
 
 .header-nav ul {
     display: flex;
@@ -138,43 +153,173 @@ header {
     color: #333;
     font-size: 17px;
     font-weight: 500;
-    transition: .3s;
-    position: relative;
 }
 
-.header-nav ul li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background: #000000;
-    transition: .3s;
-}
 
-.header-nav ul li a:hover {
-    color: rgb(45, 44, 44);
-}
+/* ================================
+   HIRE BUTTON
+================================ */
 
-.header-nav ul li a:hover::after {
-    width: 100%;
-}
-
-button {
+.hire-btn {
     background: #1a1a1b;
     border: none;
     border-radius: 30px;
-    transition: .3s;
 }
 
-button a {
+.hire-btn a {
     display: block;
     padding: 12px 28px;
     color: #fff;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
+}
+
+
+/* ================================
+   MENU BUTTON
+================================ */
+
+.menu-btn,
+.menu-close {
+    display: none;
+}
+
+
+/* =========================================
+   RESPONSIVE - 768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    .main {
+        margin-top: 10px;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    /* Hide Hire Me */
+    .hire-btn {
+        display: none;
+    }
+
+    /* Hamburger */
+    .menu-btn {
+        display: flex;
+
+        width: 45px;
+        height: 45px;
+
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+        border-radius: 50%;
+
+        /* background: #1a1a1b; */
+        color: rgb(15, 15, 15);
+
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+
+    /* Mobile Menu */
+
+    .header-nav {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: 280px;
+        height: 100vh;
+
+        background: #fff;
+
+        padding: 90px 30px 30px;
+
+        transition: right 0.4s ease;
+
+        box-shadow: -5px 0 20px rgba(0, 0, 0, .15);
+    }
+
+
+    /* Menu OPEN */
+
+    .header-nav.active {
+        right: 0;
+    }
+
+
+    /* Mobile links */
+
+    .header-nav ul {
+        display: flex;
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .header-nav ul li a {
+        font-size: 20px;
+        color: #111;
+    }
+
+
+    /* Close */
+
+    .menu-close {
+        display: flex;
+
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        width: 40px;
+        height: 40px;
+
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+        border-radius: 50%;
+
+        background: #111;
+        color: #fff;
+
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+
+
+/* =========================================
+   MOBILE - 500px
+========================================= */
+
+@media (max-width: 500px) {
+
+    .header-nav {
+        width: 250px;
+    }
+
+    .header-nav ul {
+        gap: 20px;
+    }
+
+    .header-nav ul li a {
+        font-size: 18px;
+    }
+
+    .menu-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+    }
 }
 
 button:hover {
@@ -195,7 +340,7 @@ button:hover {
         transform: translateY(0);
         opacity: 1;
     }
-}
+} */
 
 /* Header End */
 
@@ -1373,24 +1518,3 @@ button:hover {
 }
 /* flex-section style end */
 /* Responsive */
-@media(max-width:768px) {
-
-    .container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    button {
-        width: 100%;
-    }
-
-    button a {
-        text-align: center;
-    }
-}
